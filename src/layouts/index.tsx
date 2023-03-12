@@ -15,9 +15,11 @@ export function createComponent(name: string, ...components: any[]) {
     render() {
       return (
         <Fragment>
-          <TheHeader></TheHeader>
-          <TheMain></TheMain>
-          <TheFooter></TheFooter>
+          <div class="max-w-5xl mx-auto">
+            <TheHeader></TheHeader>
+            <TheMain></TheMain>
+            <TheFooter></TheFooter>
+          </div>
         </Fragment>
       )
     }
