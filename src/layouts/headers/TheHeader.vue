@@ -1,4 +1,17 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useQuery } from '@tanstack/vue-query'
+
+const initialUrl = 'https://swapi.dev/api/species/'
+const fetchUrl = async () => {
+  const response = await fetch(initialUrl)
+  return response.json()
+}
+
+const { isLoading, isFetching, isError, data, error } = useQuery({
+  queryKey: ['todos'],
+  queryFn: fetchUrl
+})
+</script>
 <template lang="">
   <header>
     <h1>
