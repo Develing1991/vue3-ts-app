@@ -1,4 +1,4 @@
-import { createComponent } from '@/layouts'
+import { createComponent } from '@/layouts/LayoutIndex'
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 //import TheHeader from '@/layouts/headers/TheHeader.vue'
