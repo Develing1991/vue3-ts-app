@@ -13,6 +13,9 @@
 import SlideCrsl from '@/components/slides/SlideCrsl.vue';
 </script>
 <style lang="scss" scoped>
+.inner {
+  max-width: 1034px;
+}
 .carosel-wrapper {
   margin: auto;
   background-color: var(--color-vue-green-light-0);
@@ -26,7 +29,6 @@ import SlideCrsl from '@/components/slides/SlideCrsl.vue';
   background-color: var(--color-vue-green-light-1);
   color: white;
   font-size: 20px;
-  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
