@@ -72,7 +72,7 @@ import 'vue3-carousel/dist/carousel.css';
   background-color: #fff;
   box-sizing: border-box;
   // border: 3px solid var(--color-vue-black);
-  border: 3px solid var(--color-vue-black);
+  border: 2px solid var(--color-vue-black);
   background-color: white;
 }
 :deep(.carousel__pagination-button--active::after) {
