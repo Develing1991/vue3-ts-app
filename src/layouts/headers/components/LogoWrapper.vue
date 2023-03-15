@@ -65,8 +65,11 @@ import InputSearch from '@/components/input/InputSearch.vue';
     &:first-child {
       margin-left: 10px;
     }
-    &:hover a {
+    a {
       font-weight: 700;
+    }
+    &:hover a {
+      color: black;
     }
   }
 }

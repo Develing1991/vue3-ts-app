@@ -31,9 +31,13 @@ const onMouseOverMenu = (event: MouseEvent) => {
   font-weight: bold;
   display: block;
 }
+.menu h2:hover a {
+  color: black;
+}
 
 .drop {
   position: absolute;
+  z-index: 999;
   background-color: #fff;
   width: 200px;
   border: 1px solid #ddd;
