@@ -17,6 +17,9 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 import 'vue3-carousel/dist/carousel.css';
 </script>
 <style lang="scss" scoped>
+.carousel {
+  margin-top: 15px;
+}
 .carousel__item {
   min-height: 300px;
   width: 100%;
@@ -35,7 +38,6 @@ import 'vue3-carousel/dist/carousel.css';
 }
 
 .carousel__slide {
-  margin-top: 10px;
   padding: 0 5px;
 }
 
