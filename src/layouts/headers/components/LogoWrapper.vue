@@ -22,7 +22,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import InputSearch from '@/components/input/InputSearch.vue';
+import InputSearch from '@/components/inputs/InputSearch.vue';
 </script>
 <style lang="scss" scoped>
 .logo-wrapper {

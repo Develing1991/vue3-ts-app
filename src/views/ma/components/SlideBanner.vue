@@ -1,32 +1,29 @@
 <template>
-  <section class="inner">
-    <Carousel>
-      <Slide v-for="slide in 10" :key="slide">
-        <div class="carousel__item">{{ slide }}</div>
-      </Slide>
-
-      <template #addons>
-        <Navigation />
-        <Pagination />
-      </template>
-    </Carousel>
+  <section class="carosel-wrapper">
+    <div class="inner">
+      <SlideCrsl />
+    </div>
   </section>
 </template>
 <script setup lang="ts">
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
-import 'vue3-carousel/dist/carousel.css';
+import SlideCrsl from '@/components/slides/SlideCrsl.vue';
 </script>
 <style lang="scss" scoped>
+.carosel-wrapper {
+  max-width: 2000px;
+  margin: auto;
+  background-color: var(--color-vue-green-light-0);
+}
 .carousel {
   margin-top: 15px;
 }
-.carousel__item {
+:deep(.carousel__item) {
   min-height: 300px;
   width: 100%;
   background-color: var(--color-vue-green-light-1);
   color: white;
   font-size: 20px;
-  border-radius: 8px;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +34,7 @@ import 'vue3-carousel/dist/carousel.css';
   opacity: 1;
 }
 
-.carousel__slide {
+:deep(.carousel__slide) {
   padding: 0 5px;
 }
 
@@ -53,7 +50,7 @@ import 'vue3-carousel/dist/carousel.css';
   transition: 0.3s;
 }
 
-.carousel__pagination {
+:deep(.carousel__pagination) {
   margin: 0;
   position: absolute;
   bottom: 10px;
@@ -61,10 +58,6 @@ import 'vue3-carousel/dist/carousel.css';
   right: 0;
   margin: auto;
 }
-.carousel__pagination-item {
-  //background-color: white;
-}
-
 :deep(.carousel__pagination-button::after) {
   display: block;
   content: '';
