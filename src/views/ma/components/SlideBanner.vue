@@ -1,7 +1,11 @@
 <template>
   <section class="carosel-wrapper">
     <div class="inner">
-      <SlideCrsl />
+      <SlideCrsl :autoplay="4000" :wrap-around="true">
+        <template #item="{ slide }">
+          <div class="carousel__item">slide - {{ slide }}</div>
+        </template>
+      </SlideCrsl>
     </div>
   </section>
 </template>
@@ -10,7 +14,6 @@ import SlideCrsl from '@/components/slides/SlideCrsl.vue';
 </script>
 <style lang="scss" scoped>
 .carosel-wrapper {
-  max-width: 2000px;
   margin: auto;
   background-color: var(--color-vue-green-light-0);
 }

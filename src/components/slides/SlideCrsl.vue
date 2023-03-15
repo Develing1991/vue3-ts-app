@@ -15,12 +15,12 @@
     :dir="dir"
   >
     <Slide v-for="slide in 10" :key="slide">
-      <div class="carousel__item">slide -{{ slide }}</div>
+      <slot name="item" :slide="slide"></slot>
     </Slide>
 
     <template #addons>
-      <Navigation />
-      <Pagination />
+      <Navigation v-if="hasNavi" />
+      <Pagination v-if="hasPage" />
     </template>
   </Carousel>
 </template>
@@ -42,7 +42,9 @@ withDefaults(defineProps<CarouselConfig>(), {
   mouseDrag: true,
   touchDrag: true,
   pauseAutoplayOnHover: false,
-  dir: 'ltr'
+  dir: 'ltr',
+  hasNavi: true,
+  hasPage: true
 });
 </script>
 
@@ -71,5 +73,7 @@ interface CarouselConfig {
   dir?: Dir;
   breakpoints?: Breakpoints;
   settings?: Partial<CarouselConfig>;
+  hasNavi?: boolean;
+  hasPage?: boolean;
 }
 </script>
