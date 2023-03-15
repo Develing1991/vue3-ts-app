@@ -1,6 +1,6 @@
 import { createComponent } from '@/layouts/LayoutIndex';
 import { createRouter, createWebHistory } from 'vue-router';
-import HomeView from '../views/HomeView.vue';
+
 //import TheHeader from '@/layouts/headers/TheHeader.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,8 +20,8 @@ const router = createRouter({
       children: [
         {
           path: '/',
-          name: 'ssssss',
-          component: () => import('@/views/HomeView.vue')
+          name: 'MainPage',
+          component: () => import('@/views/ma/MainPage.vue')
         }
       ]
     },

@@ -140,7 +140,8 @@ table {
   box-sizing: border-box;
   /* vue color */
   --color-vue-green: #41b883;
-  --color-vue-green-light-0: #54db9e;
+  --color-vue-green-light-0: #7fffd4;
+  --color-vue-green-light-1: #54db9e;
   --color-vue-black: #34495e;
 }
 
