@@ -59,13 +59,13 @@ type SnapAlign = 'start' | 'end' | 'center' | 'center-even' | 'center-odd';
 
 type Dir = 'rtl' | 'ltr';
 interface CarouselConfig {
-  itemsToShow: number;
-  itemsToScroll: number;
+  itemsToShow?: number; //
+  itemsToScroll?: number; //
   modelValue?: number;
   transition?: number;
   throttle?: number;
   autoplay?: number;
-  snapAlign: SnapAlign;
+  snapAlign?: SnapAlign; //
   wrapAround?: boolean;
   pauseAutoplayOnHover?: boolean;
   mouseDrag?: boolean;
