@@ -18,6 +18,9 @@
           <RouterLink to="/">{{ menu }}</RouterLink>
         </li>
       </ul>
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
     </div>
   </div>
 </template>
@@ -30,11 +33,13 @@ import InputSearch from '@/components/inputs/InputSearch.vue';
   justify-content: space-between;
   align-items: center;
   height: 90px;
+  word-break: keep-all;
 }
 
 .left-area,
 .right-area {
   width: 100%;
+  align-items: center;
 }
 
 .logo {
@@ -71,6 +76,21 @@ import InputSearch from '@/components/inputs/InputSearch.vue';
     &:hover a {
       color: black;
     }
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+.menu-icon {
+  display: none;
+  margin: 0 10px;
+  padding: 10px;
+  // display: flex;
+  align-items: center;
+  font-size: 28px;
+  cursor: pointer;
+  @media screen and (max-width: 768px) {
+    display: flex;
   }
 }
 </style>
