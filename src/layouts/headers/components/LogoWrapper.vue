@@ -32,7 +32,7 @@ import InputSearch from '@/components/inputs/InputSearch.vue';
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 90px;
+  height: 110px;
   word-break: keep-all;
 }
 

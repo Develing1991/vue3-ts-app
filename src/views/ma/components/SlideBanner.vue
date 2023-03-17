@@ -15,6 +15,7 @@ import SlideCrsl from '@/components/slides/SlideCrsl.vue';
 <style lang="scss" scoped>
 .inner {
   max-width: 1034px;
+  margin-top: 40px;
 }
 .carosel-wrapper {
   margin: auto;
