@@ -1,6 +1,16 @@
 <template>
   <nav>
     <ul class="menus">
+      <NavWrapperSubMenu :ddd="1" />
+      <NavWrapperSubMenu />
+      <NavWrapperSubMenu />
+      <NavWrapperSubMenu />
+      <NavWrapperSubMenu />
+      <NavWrapperSubMenu />
+      <NavWrapperSubMenu />
+      <NavWrapperSubMenu />
+      <NavWrapperSubMenu />
+      <NavWrapperSubMenu />
       <NavWrapperSubMenu />
       <NavWrapperSubMenu />
       <NavWrapperSubMenu />
@@ -13,10 +23,10 @@ import NavWrapperSubMenu from './NavWrapperSubMenu.vue';
 <style lang="scss" scoped>
 nav {
   background-color: var(--color-vue-green-light-1);
-  padding: 0 20px;
 }
 .menus {
   display: flex;
   align-items: center;
+  overflow-x: auto;
 }
 </style>

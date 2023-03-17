@@ -1,7 +1,7 @@
 <template>
   <li class="menu" @mouseover="onMouseOverMenu" @mouseout="onMouseOverMenu">
     <h2>
-      <RouterLink to="/">home</RouterLink>
+      <RouterLink to="/">home{{ ddd }}</RouterLink>
     </h2>
     <ul class="drop" v-show="dropMenu">
       <li><RouterLink to="/">aaa</RouterLink></li>
@@ -13,6 +13,12 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+defineProps({
+  ddd: {
+    type: Number,
+    default: 2
+  }
+});
 const dropMenu = ref(false);
 const onMouseOverMenu = (event: MouseEvent) => {
   dropMenu.value = event.type === 'mouseover';
@@ -53,6 +59,10 @@ const onMouseOverMenu = (event: MouseEvent) => {
     padding: 15px 10px;
     font-weight: 700;
     display: block;
+  }
+
+  @media screen and (max-width: 1024px) {
+    display: none;
   }
 }
 </style>
