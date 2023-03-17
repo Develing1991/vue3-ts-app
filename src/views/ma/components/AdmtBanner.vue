@@ -21,6 +21,9 @@ import SlideCrsl from '@/components/slides/SlideCrsl.vue';
 <style lang="scss" scoped>
 .ad-wrapper {
   margin-top: 80px;
+  @media screen and (max-width: 480px) {
+    margin-top: 40px;
+  }
 }
 :deep(.carousel__item) {
   min-height: 150px;
@@ -32,5 +35,9 @@ import SlideCrsl from '@/components/slides/SlideCrsl.vue';
   justify-content: center;
   align-items: center;
   cursor: pointer;
+
+  @media screen and (max-width: 480px) {
+    min-height: 100px;
+  }
 }
 </style>

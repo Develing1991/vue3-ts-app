@@ -96,7 +96,7 @@ withDefaults(defineProps<CarouselConfig>(), {
 
 <!-- types -->
 <script lang="ts">
-type Breakpoints = { [key: number]: Partial<CarouselConfig> };
+// type Breakpoints = { [key: number]: Partial<CarouselConfig> };
 
 type SnapAlign = 'start' | 'end' | 'center' | 'center-even' | 'center-odd';
 
@@ -114,10 +114,10 @@ interface CarouselConfig {
   mouseDrag?: boolean;
   touchDrag?: boolean;
   dir?: Dir;
-  breakpoints?: Breakpoints;
-  settings?: Partial<CarouselConfig>;
+  breakpoints?: Record<string, any>;
+  settings?: Record<string, any>;
   hasNavi?: boolean;
   hasPage?: boolean;
-  items: number[]; //object[]
+  items?: number[]; //object[]
 }
 </script>

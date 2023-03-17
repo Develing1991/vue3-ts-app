@@ -18,6 +18,7 @@
 <style lang="scss" scoped>
 .links-wrapper {
   margin-top: 50px;
+  overflow-x: auto;
 }
 .image-area {
   display: block;
@@ -29,7 +30,6 @@
   display: flex;
   gap: 15px;
   padding: 0 15px;
-  overflow-x: auto;
 }
 .link {
   flex: 1;

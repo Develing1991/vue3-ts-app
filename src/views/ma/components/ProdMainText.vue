@@ -29,6 +29,7 @@ interface Props {
   h3 {
     font-size: 20px;
     font-weight: 700;
+    margin-right: 10px;
   }
 }
 </style>

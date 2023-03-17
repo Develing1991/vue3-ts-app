@@ -40,7 +40,7 @@ interface Props {
 }
 
 .description {
-  word-break: break-all;
+  word-break: keep-all;
   padding: 10px;
   line-height: 1.25rem;
 
@@ -55,6 +55,7 @@ interface Props {
   .info {
     margin-top: 10px;
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
     gap: 10px;
     .rate,
