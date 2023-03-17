@@ -34,5 +34,12 @@
 .link {
   flex: 1;
   min-width: 12%;
+
+  @media screen and (max-width: 768px) {
+    min-width: 9%;
+  }
+  @media screen and (max-width: 768px) {
+    min-width: 7%;
+  }
 }
 </style>
