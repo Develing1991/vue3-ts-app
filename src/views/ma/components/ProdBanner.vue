@@ -1,5 +1,5 @@
 <template>
-  <section class="inner products">
+  <section class="inner products-wrapper">
     <!-- <ProdMainText v-bind="{ text: $attrs.text as string, isMore: $attrs.isMore as boolean }" />
     <ProdCardList :col="($attrs.col as number)"> -->
     <ProdMainText :text="text" :is-more="isMore" />
@@ -29,7 +29,7 @@ export interface Props {
 </script>
 
 <style scoped lang="scss">
-.products {
+.products-wrapper {
   margin-top: 50px;
 }
 </style>

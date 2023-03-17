@@ -44,7 +44,7 @@
     margin-top: 10px;
     display: flex;
     align-items: flex-end;
-    gap: 0.625rem;
+    gap: 10px;
     .rate,
     .discount {
       font-size: 1.125rem;

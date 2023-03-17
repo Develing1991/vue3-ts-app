@@ -14,7 +14,7 @@ withDefaults(defineProps<Props>(), {
 .product-list {
   display: grid;
   grid-template-columns: repeat(var(--col), 1fr);
-  gap: 10px;
+  gap: 15px;
 }
 </style>
 
