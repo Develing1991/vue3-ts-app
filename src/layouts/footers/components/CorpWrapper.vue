@@ -5,8 +5,8 @@
       <div class="day-time">평일 10:00-18:00</div>
       <div class="day-time">(점심시간 13:00 - 14:00 제외 · 주말/공휴일 제외)</div>
       <div class="btn-group">
-        <button class="btn--primary">APP STORE</button>
-        <button class="btn--primary">PLAY STORE</button>
+        <BasicButton class="btn--primary">APP STORE</BasicButton>
+        <BasicButton class="btn--primary">PLAY STORE</BasicButton>
       </div>
     </div>
     <div class="info">
@@ -29,7 +29,9 @@
   <div class="copyright">Copyright ©Suhan Mobile Inc. All Rights Reserved.</div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import BasicButton from '@/components/buttons/BasicButton.vue';
+</script>
 
 <style lang="scss" scoped>
 address {
@@ -76,6 +78,6 @@ address {
   display: flex;
   justify-content: center;
   font-size: 1.125rem;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 </style>

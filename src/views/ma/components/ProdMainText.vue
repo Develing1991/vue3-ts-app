@@ -1,11 +1,13 @@
 <template>
   <div class="main-title">
     <h3>{{ text }}</h3>
-    <button v-if="isMore" class="btn--primary">더보기</button>
+    <BasicButton v-if="isMore" class="btn--primary">더보기</BasicButton>
   </div>
 </template>
 
 <script setup lang="ts">
+import BasicButton from '@/components/buttons/BasicButton.vue';
+
 withDefaults(defineProps<Props>(), {
   text: '',
   isMore: false
