@@ -1,19 +1,24 @@
 <template>
   <section class="inner products-wrapper">
-    <!-- <ProdMainText v-bind="{ text: $attrs.text as string, isMore: $attrs.isMore as boolean }" />
-    <ProdCardList :col="($attrs.col as number)"> -->
     <ProdMainText :text="text" :is-more="isMore" />
-    <ProdCardList :col="col">
-      <ProdCardItem v-for="i in items" :key="i" />
-    </ProdCardList>
+    <SlideCrsl
+      :items="items"
+      :items-to-show="4"
+      :snap-align="'start'"
+      :has-page="false"
+      :has-navi="true"
+    >
+      <template #item="{ slide }">
+        <ProdCardItem :item="slide" />
+      </template>
+    </SlideCrsl>
   </section>
 </template>
 
 <script setup lang="ts">
-import ProdCardList from '@/components/cards/ProdCardList.vue';
 import ProdCardItem from '@/components/cards/ProdCardItem.vue';
 import ProdMainText from './ProdMainText.vue';
-
+import SlideCrsl from '@/components/slides/SlideCrsl.vue';
 withDefaults(defineProps<Props>(), {
   isMore: false
 });
@@ -25,14 +30,20 @@ export default {
 };
 export interface Props {
   text: string;
-  isMore: boolean;
-  col?: number;
+  isMore?: boolean;
+  // col?: number;
   items?: number[]; //Array<object>
 }
 </script>
 
 <style scoped lang="scss">
 .products-wrapper {
-  margin-top: 50px;
+  margin-top: 80px;
+}
+:deep(.carousel__prev),
+:deep(.carousel__next) {
+  top: 0;
+  bottom: 0;
+  margin: auto 20px;
 }
 </style>

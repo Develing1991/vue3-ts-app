@@ -9,7 +9,12 @@
     <ul class="description">
       <li class="brand">brand</li>
       <li class="title elipsis-2">
-        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates fuga</h4>
+        <h4>
+          {{ item }}
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt unde, magni sapiente
+          praesentium explicabo, totam necessitatibus perspiciatis sint voluptatibus harum
+          voluptatem soluta facere dolor rerum atque aut iure nemo ullam.
+        </h4>
       </li>
       <li class="info">
         <span class="rate">15%</span>
@@ -20,7 +25,14 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps<Props>();
+</script>
+<script lang="ts">
+interface Props {
+  item?: number; //object
+}
+</script>
 
 <style scoped lang="scss">
 .image-area {

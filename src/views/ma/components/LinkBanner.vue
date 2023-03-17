@@ -21,7 +21,7 @@
 }
 .image-area {
   display: block;
-  max-width: 100px;
+  // max-width: 100px;
 }
 
 .links {
@@ -33,6 +33,6 @@
 }
 .link {
   flex: 1;
-  min-width: 10%;
+  min-width: 12%;
 }
 </style>

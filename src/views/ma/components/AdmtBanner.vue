@@ -1,7 +1,7 @@
 <template>
   <section class="inner ad-wrapper">
     <SlideCrsl
-      :ad-item="[1, 2]"
+      :items="[1, 2]"
       :autoplay="4000"
       :wrap-around="true"
       :has-page="false"

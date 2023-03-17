@@ -14,7 +14,7 @@
     :pauseAutoplayOnHover="pauseAutoplayOnHover"
     :dir="dir"
   >
-    <Slide v-for="slide in adItem" :key="slide">
+    <Slide v-for="slide in items" :key="slide">
       <slot name="item" :slide="slide"></slot>
     </Slide>
 
@@ -45,12 +45,54 @@ withDefaults(defineProps<CarouselConfig>(), {
   dir: 'ltr',
   hasNavi: true,
   hasPage: true,
-  addItem: []
+  items: () => [1, 2] //object array
 });
 </script>
 
 <!-- style -->
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.carousel {
+  margin-top: 15px;
+}
+
+:deep(.carousel__slide) {
+  padding: 0 5px;
+}
+
+:deep(.carousel__prev),
+:deep(.carousel__next) {
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: rgba($color: #fff, $alpha: 0.5);
+  margin: 0 20px;
+  width: 40px;
+  height: 40px;
+}
+
+:deep(.carousel__pagination) {
+  margin: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+:deep(.carousel__pagination-button::after) {
+  display: block;
+  content: '';
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-sizing: border-box;
+  // border: 3px solid var(--color-vue-black);
+  border: 2px solid var(--color-vue-black);
+  background-color: white;
+}
+:deep(.carousel__pagination-button--active::after) {
+  background-color: var(--color-vue-black);
+}
+</style>
 
 <!-- types -->
 <script lang="ts">
@@ -76,6 +118,6 @@ interface CarouselConfig {
   settings?: Partial<CarouselConfig>;
   hasNavi?: boolean;
   hasPage?: boolean;
-  adItem: number[]; //object[]
+  items: number[]; //object[]
 }
 </script>
