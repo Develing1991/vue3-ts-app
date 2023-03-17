@@ -1,7 +1,7 @@
 <template>
   <section class="carosel-wrapper">
     <div class="inner">
-      <SlideCrsl :autoplay="4000" :wrap-around="true">
+      <SlideCrsl :ad-item="[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" :autoplay="4000" :wrap-around="true">
         <template #item="{ slide }">
           <div class="carousel__item">slide - {{ slide }}</div>
         </template>

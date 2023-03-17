@@ -14,7 +14,7 @@
     :pauseAutoplayOnHover="pauseAutoplayOnHover"
     :dir="dir"
   >
-    <Slide v-for="slide in 10" :key="slide">
+    <Slide v-for="slide in adItem" :key="slide">
       <slot name="item" :slide="slide"></slot>
     </Slide>
 
@@ -44,7 +44,8 @@ withDefaults(defineProps<CarouselConfig>(), {
   pauseAutoplayOnHover: false,
   dir: 'ltr',
   hasNavi: true,
-  hasPage: true
+  hasPage: true,
+  addItem: []
 });
 </script>
 
@@ -75,5 +76,6 @@ interface CarouselConfig {
   settings?: Partial<CarouselConfig>;
   hasNavi?: boolean;
   hasPage?: boolean;
+  adItem: number[]; //object[]
 }
 </script>
