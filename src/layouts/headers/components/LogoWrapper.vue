@@ -29,7 +29,7 @@ import InputSearch from '@/components/inputs/InputSearch.vue';
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 90px;
 }
 
 .left-area,

@@ -24,7 +24,7 @@ import SlideCrsl from '@/components/slides/SlideCrsl.vue';
   margin-top: 15px;
 }
 :deep(.carousel__item) {
-  min-height: 300px;
+  min-height: 450px;
   width: 100%;
   background-color: var(--color-vue-green-light-1);
   color: white;
