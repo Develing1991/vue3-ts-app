@@ -21,6 +21,14 @@
 .trms-wrapper {
   display: flex;
   gap: 20px;
+  a:hover {
+    color: white;
+    background-color: var(--color-vue-green);
+    border-radius: 5px;
+  }
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 }
 
 a {

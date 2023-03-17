@@ -27,6 +27,8 @@ nav {
 .menus {
   display: flex;
   align-items: center;
-  overflow-x: auto;
+  @media screen and (max-width: 1024px) {
+    overflow-x: auto;
+  }
 }
 </style>

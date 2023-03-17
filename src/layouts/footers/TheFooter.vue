@@ -11,7 +11,9 @@ import CorpWrapper from './components/CorpWrapper.vue';
 
 <style lang="scss" scoped>
 footer {
-  margin-top: 100px;
+  margin-top: 80px;
   font-size: 0.875rem;
+  background-color: var(--color-vue-green-light-0);
+  padding: 20px;
 }
 </style>

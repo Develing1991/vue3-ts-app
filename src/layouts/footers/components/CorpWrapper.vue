@@ -33,20 +33,31 @@
 
 <style lang="scss" scoped>
 address {
+  word-break: keep-all;
   display: flex;
   margin-top: 40px;
   gap: 20px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+  @media screen and (max-width: 480px) {
+    word-break: break-all;
+  }
 }
 .call {
   display: flex;
   flex-direction: column;
   gap: 10px;
+
   .call-center {
     font-size: 2.125rem;
     font-weight: 700;
   }
   .day-time {
     font-size: 1.25rem;
+    @media screen and (max-width: 480px) {
+      font-size: 1rem;
+    }
   }
   .btn-group {
     display: flex;
@@ -57,12 +68,14 @@ address {
 .info {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
+  line-height: 1.2rem;
 }
 .copyright {
   margin-top: 30px;
   display: flex;
   justify-content: center;
   font-size: 1.125rem;
+  margin-bottom: 20px;
 }
 </style>
