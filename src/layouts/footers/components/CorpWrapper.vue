@@ -43,6 +43,7 @@ address {
     flex-direction: column;
   }
   @media screen and (max-width: 480px) {
+    margin-top: 20px;
     word-break: break-all;
   }
 }
@@ -56,10 +57,7 @@ address {
     font-weight: 700;
   }
   .day-time {
-    font-size: 1.25rem;
-    @media screen and (max-width: 480px) {
-      font-size: 1rem;
-    }
+    font-size: 1rem;
   }
   .btn-group {
     display: flex;

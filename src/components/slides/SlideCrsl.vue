@@ -51,12 +51,9 @@ withDefaults(defineProps<CarouselConfig>(), {
 
 <!-- style -->
 <style lang="scss" scoped>
-// .carousel {
+// :deep(.carousel__slide) {
+//   padding: 0 5px;
 // }
-
-:deep(.carousel__slide) {
-  padding: 0 5px;
-}
 
 :deep(.carousel__prev),
 :deep(.carousel__next) {

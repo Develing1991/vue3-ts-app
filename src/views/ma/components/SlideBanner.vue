@@ -43,10 +43,6 @@ import SlideCrsl from '@/components/slides/SlideCrsl.vue';
   opacity: 1;
 }
 
-:deep(.carousel__slide) {
-  padding: 0 5px;
-}
-
 :deep(.carousel__prev),
 :deep(.carousel__next) {
   opacity: 0;
