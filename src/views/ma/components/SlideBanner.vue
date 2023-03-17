@@ -30,6 +30,12 @@ import SlideCrsl from '@/components/slides/SlideCrsl.vue';
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  @media screen and (max-width: 768px) {
+    min-height: 350px;
+  }
+  @media screen and (max-width: 480px) {
+    min-height: 250px;
+  }
 }
 .carousel:hover :deep(.carousel__prev),
 .carousel:hover :deep(.carousel__next) {
