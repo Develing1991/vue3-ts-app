@@ -1,12 +1,17 @@
-import { ref, computed } from 'vue'
-import { defineStore } from 'pinia'
+import { ref, computed } from 'vue';
+import { defineStore } from 'pinia';
 
-export const useCounterStore = defineStore('counter', () => {
-  const count = ref(0)
-  const doubleCount = computed(() => count.value * 2)
-  function increment() {
-    count.value++
+export const useCounterStore = defineStore('counter', {
+  state: () => ({
+    data: null as any
+  }),
+  getters: {
+    data: (state) => state.data + '1'
+  },
+  actions: {
+    async setUser() {
+      // const { data } = await useAxios('https://koreanjson.com/posts/1', AxiosMethod.GET, {});
+      // this.data = data;
+    }
   }
-
-  return { count, doubleCount, increment }
-})
+});

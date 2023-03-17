@@ -1,3 +1,5 @@
+// import useAxios, { AxiosMethod } from '@/composable/useAxios';
+// import { useCounterStore } from '@/stores/counter';
 import { createComponent } from '@/layouts/LayoutIndex';
 import { createRouter, createWebHistory } from 'vue-router';
 
@@ -22,6 +24,12 @@ const router = createRouter({
           path: '/',
           name: 'MainPage',
           component: () => import('@/views/ma/MainPage.vue')
+          // beforeEnter: () => {
+          //   const { data } = useAxios('https://koreanjson.com/posts/1', AxiosMethod.GET, {});
+          //   // console.log(data);
+          //   const store = useCounterStore();
+          //   store.setUser(data);
+          // }
         }
       ]
     },
