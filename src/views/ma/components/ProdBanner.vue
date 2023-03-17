@@ -4,7 +4,7 @@
     <ProdCardList :col="($attrs.col as number)"> -->
     <ProdMainText :text="text" :is-more="isMore" />
     <ProdCardList :col="col">
-      <ProdCardItem v-for="i in 4" :key="i" />
+      <ProdCardItem v-for="i in items" :key="i" />
     </ProdCardList>
   </section>
 </template>
@@ -25,6 +25,7 @@ export interface Props {
   text: string;
   isMore: boolean;
   col?: number;
+  items?: number[]; //Array<object>
 }
 </script>
 
